@@ -24,5 +24,4 @@ while True:
     
     win.blit (scale, position) # Error hier ohne die zeile öffnet sich das fenster aber ohne bild
     pygame.display.flip()
-    #test
     
