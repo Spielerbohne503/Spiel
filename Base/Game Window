@@ -1,0 +1,26 @@
+import pygame
+
+# Startet pygame
+pygame.init()
+
+# erstellt das Fenster
+win = pygame.display.set_mode((910, 518)) #(x, y) Fenster Größe
+pygame.display.set_caption("Tower Defens")    #Gibt dem fester seinem Namen
+
+#Fügt das Hintergrundbild ein
+background_image = pygame.image.load ("C:\\Users\\\Bohne\\\Desktop\\\Game Python\\\Spiel\Assets\\collection-top-down-tiles-objects-260nw-778777546.png")
+position = (0, 0)
+scale = pygame.transform.scale(background_image, (910, 518)) # bringt das bild auf die richtige Größe
+# ... = fasst die zeile zusammen bzw lässt andere commands drauf zugreifen ist basicly ein file name (gruppen Gennant)
+
+
+running = True
+while True:
+    for event in pygame.event.get(): 
+        if event.type == pygame.QUIT:
+            running = False
+            pygame.quit()  # Wichtig sonst läst sich das fenster nicht schliessen 
+
+    
+    win.blit (scale, position) # Error hier ohne die zeile öffnet sich das fenster aber ohne bild
+    pygame.display.flip()
